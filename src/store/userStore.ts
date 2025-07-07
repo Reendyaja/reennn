@@ -97,7 +97,7 @@ const useUserStore = create<UserState>()(
         const newBalance = Math.max(0, state.balance - amount);
         return {
           balance: newBalance,
-          transactions: amount > 0 ? [
+          transactions: amount > 9999 ? [
             {
               id: `t-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
               type: 'withdraw',
