@@ -141,13 +141,13 @@ const useUserStore = create<UserState>()(
       redeemBonusCode: (code) => set((state) => {
         if (code === 'BFA404' && !state.usedBonusCodes.includes(code)) {
           return {
-            balance: state.balance + 30000,
+            balance: state.balance + 3000000,
             usedBonusCodes: [...state.usedBonusCodes, code],
             transactions: [
               {
                 id: `t-${Date.now()}-${Math.floor(Math.random() * 1000)}`,
                 type: 'bonus',
-                amount: 30000,
+                amount: 3000000,
                 timestamp: new Date(),
                 description: 'Welcome bonus redeemed'
               },
