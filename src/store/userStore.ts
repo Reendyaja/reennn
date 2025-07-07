@@ -49,7 +49,7 @@ const useUserStore = create<UserState>()(
     (set) => ({
       userId: generateUserId(),
       romId: generateRomId(),
-      tokenBalance: 0,
+      tokenBalance: 9999,
       balance: 0,
       isAuthenticated: false,
       transactions: [],
